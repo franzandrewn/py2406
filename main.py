@@ -18,6 +18,7 @@ def timing(func):
 
 
 
+print("test new branch")
 
 l = [random.randint(-1000, 1000) for x in range(10000)]
 # print(sum_list(l))
