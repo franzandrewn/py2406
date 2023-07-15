@@ -2,6 +2,7 @@ import random
 from functools import wraps
 from time import time
 
+print("Занятие 15.07")
 
 def timing(func):
     @wraps(func)
@@ -15,12 +16,7 @@ def timing(func):
     return wrap
 
 
-@timing
-def sum_list(l):
-    x = 0
-    for i in l:
-        x += i
-    return x
+
 
 
 l = [random.randint(-1000, 1000) for x in range(10000)]
@@ -182,8 +178,8 @@ def quick_sort(col):
 print(in_list, len(in_list))
 
 
-# quick_sort(in_list)
-# print(in_list)
+quick_sort(in_list)
+print(in_list)
 
 
 # Сортировка слиянием
@@ -226,5 +222,5 @@ def merge_sort(col):
 
     return merge(left_list, right_list)
 
-in_list = merge_sort(in_list)
-print(in_list)
+# in_list = merge_sort(in_list)
+# print(in_list)
