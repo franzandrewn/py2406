@@ -260,8 +260,10 @@ def binary_trees():
     postorder(root)
 
 
-binary_trees()
+# binary_trees()
 
+# name = input("Введите имя: ")
+# print(name)
 # input() - считать строчку у пользователя
 # int() - превратить что-либо в целое число
 # split() - "разрезать" строку на список по определенной строчке
@@ -270,13 +272,41 @@ binary_trees()
 # Сказать ему все уникальные числа из его набора
 # In: 1,2,3,4,4,4,4,4,4,5,5
 # Out: 1,2,3,4,5
+def task1():
+    # input_string = input()
+    # inputs = input_string.split(",")
+    # ints = []
+    # for s in inputs:
+    #     ints.append(int(s))
+    ints = [int(x) for x in input().split(",")]
+    result = []
+    for x in ints:
+        if x not in result:
+            result.append(x)
+    print(result)
+    print(set(ints))
+# task1()
 
 # Задание 2
 # Принять от пользователя набор чисел
 # Вывести в ответ какие числа в этом наборе встречались
 # и сколько раз они встречались
 # In: 1,2,3,4,4,4,4,4,4,5,5
-# Out: 1=1, 2=1, 3=1, 4=5, 5=2
+# Out: 1=1, 2=1, 3=1, 4=6, 5=2
+def task2():
+    input_string = input()
+    inputs = input_string.split(",")
+    ints = []
+    for s in inputs:
+        ints.append(int(s))
+
+    result = {}
+    for x in ints:
+        if x not in result:
+            result[x] = 0
+        result[x] += 1
+    print(result)
+# task2()
 
 # Задание 3
 # Принять от пользователя строчку
@@ -286,3 +316,8 @@ binary_trees()
 # Out: False
 # In: anna
 # Out: True
+def task3():
+    s = input().replace(" ", "")
+    rev_s = s[::-1]
+    print(s == rev_s)
+task3()
